@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madium Client — приватный клиент с поддержкой и покупкой</title>
+  <meta name="description" content="Madium Client — приватный игровой клиент: авто-обновления, приватность, поддержка 24/7 и удобная покупка доступа." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark">MD</span>
+        <span class="logo__text">Madium<em>Client</em></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#features" class="nav__link">Возможности</a>
+        <a href="#game" class="nav__link">Мини-игра</a>
+        <a href="#pricing" class="nav__link">Тарифы</a>
+        <a href="#profile" class="nav__link">Профиль</a>
+        <a href="#support" class="nav__link">Поддержка</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <span class="status-pill" title="Статус сервисов">
+          <span class="status-pill__dot"></span> Онлайн
+        </span>
+        <div class="auth-area" id="authArea">
+          <button class="btn btn--ghost btn--sm" id="loginBtn">Войти</button>
+        </div>
+        <button class="btn btn--primary btn--sm" data-buy="">Купить</button>
+        <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="badge" data-reveal>
+            <span class="badge__dot"></span> v2.4.1 · статус: <b>Undetected</b> · обновление 03.10.2026
+          </div>
+          <h1 class="hero__title" data-reveal>
+            Приватный клиент<br />
+            <span class="gradient-text">с поддержкой и оплатой</span>
+          </h1>
+          <p class="hero__subtitle" data-reveal>
+            Madium Client — стабильный клиент с ежедневными авто-обновлениями,
+            честной гарантией приватности и живой поддержкой 24/7.
+            Подписка активируется сразу после оплаты.
+          </p>
+          <div class="hero__cta" data-reveal>
+            <button class="btn btn--primary btn--lg" data-buy="">
+              Купить доступ <span class="btn__arrow">→</span>
+            </button>
+            <a href="#game" class="btn btn--ghost btn--lg">Сыграть в мини-игру</a>
+          </div>
+          <ul class="hero__points" data-reveal>
+            <li>✓ Подписка от 149 ₽</li>
+            <li>✓ Оплата картой / криптой</li>
+            <li>✓ Мгновенная активация</li>
+          </ul>
+        </div>
+
+        <div class="hero__panel" data-reveal>
+          <div class="panel">
+            <div class="panel__bar">
+              <span class="panel__dot panel__dot--r"></span>
+              <span class="panel__dot panel__dot--y"></span>
+              <span class="panel__dot panel__dot--g"></span>
+              <span class="panel__name">madium://loader</span>
+            </div>
+            <div class="panel__body">
+              <p><span class="c-dim">$</span> mdclient --status</p>
+              <p><span class="c-ok">✔</span> core: <b>ready</b> (build 2.4.1)</p>
+              <p><span class="c-ok">✔</span> anti-detect: <b>clean</b></p>
+              <p><span class="c-ok">✔</span> license: <b>valid</b> · 29 дней</p>
+              <p><span class="c-warn">…</span> ping server: <b class="c-accent">18 ms</b></p>
+              <p class="panel__type"><span class="c-dim">$</span> <span id="typeLine"></span><span class="caret">▌</span></p>
+            </div>
+            <div class="panel__stats">
+              <div><span>Игроков сейчас</span><b data-count="12847">0</b></div>
+              <div><span>Аптайм</span><b>99.9%</b></div>
+              <div><span>Обновлений / мес</span><b>40+</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Возможности</span>
+          <h2 class="section__title">Всё, что нужно <span class="gradient-text">для игры</span></h2>
+          <p class="section__desc">Модульная система: включай только то, чем пользуешься.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card" data-reveal>
+            <div class="card__icon">⚡</div>
+            <h3>Производительность</h3>
+            <p>Лёгкий лоадер, минимальный FPS-оверхед и быстрый запуск за пару секунд.</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__icon">🛡️</div>
+            <h3>Приватность</h3>
+            <p>HWID-сброс при смене железа, шифрование трафика и нулевые логи на сервере.</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__icon">🔄</div>
+            <h3>Авто-обновления</h3>
+            <p>Клиент обновляется сам в день патча — без ручных скачиваний и конфигов.</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__icon">🎛️</div>
+            <h3>Гибкие модули</h3>
+            <p>Пресеты, хоткеи, сохранение конфигов в облаке и импорт/экспорт одним кликом.</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__icon">💬</div>
+            <h3>Поддержка 24/7</h3>
+            <p>Тикеты в личном кабинете и живой чат — среднее время ответа до 10 минут.</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__icon">🎮</div>
+            <h3>Мини-игра внутри</h3>
+            <p>Пока качается апдейт — поохоться в неоновой арене прямо на сайте (см. ниже).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MINI GAME ===== -->
+    <section class="section section--game" id="game">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Развлекательный модуль</span>
+          <h2 class="section__title">Три игры <span class="gradient-text">в одном окне</span></h2>
+          <p class="section__desc">
+            Выбирай режим карточкой ниже: шутер, 2D-песочница или ритм-босс.
+            Управление подсвечивается под каждым режимом, рекорды сохраняются локально.
+          </p>
+        </div>
+
+        <div class="arena" data-reveal>
+          <div class="game-picker" id="gamePicker">
+            <button class="gp is-active" data-game="arena">
+              <span class="gp__ico">◎</span>
+              <span class="gp__body">
+                <b>Неоновая арена</b>
+                <span>Классика: волны роя, аптечки, рекорды</span>
+              </span>
+              <span class="gp__tag">Shooter</span>
+            </button>
+            <button class="gp" data-game="mine">
+              <span class="gp__ico">⛏</span>
+              <span class="gp__body">
+                <b>Mineplace</b>
+                <span>2D-майнкрафт: копай, строй, прыгай</span>
+              </span>
+              <span class="gp__tag">Sandbox</span>
+            </button>
+            <button class="gp" data-game="nebula">
+              <span class="gp__ico">⬢</span>
+              <span class="gp__body">
+                <b>Nebula Strike</b>
+                <span>3-я волна: 6-гранник и ритм Q·E·R·F</span>
+              </span>
+              <span class="gp__tag">Rhythm</span>
+            </button>
+          </div>
+
+          <div class="arena__hud">
+            <div class="hud-item"><span id="hudHpLbl">HP</span><div class="hud-bar"><i id="hpBar"></i></div></div>
+            <div class="hud-item"><span id="scoreLbl">Счёт</span><b id="scoreVal">0</b></div>
+            <div class="hud-item"><span id="waveLbl">Волна</span><b id="waveVal">1</b></div>
+            <div class="hud-item"><span id="bestLbl">Рекорд</span><b id="bestVal">0</b></div>
+            <div class="hud-item hud-item--qte" id="qteHud" hidden><span>Ритм</span><b id="qteVal">—</b></div>
+          </div>
+
+          <div class="arena__wrap">
+            <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+            <div class="game-overlay" id="gameOverlay">
+              <div class="game-overlay__box">
+                <h3 id="overlayTitle">Неоновая арена</h3>
+                <p id="overlayText">
+                  Отбивайся от роя, собирай аптечки и держись как можно дольше.<br />
+                  <b>WASD</b> — движение · <b>мышь</b> — стрельба · <b>P</b> — пауза
+                </p>
+                <button class="btn btn--primary btn--lg" id="startBtn">Играть</button>
+                <p class="overlay-hint">Это демо-игра, она не связана с покупкой доступа :)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="arena__footer">
+            <span id="gameTip">Совет: стреляй на ходу, не стой на месте.</span>
+            <div class="arena__keys" id="gameKeys">
+              <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> движение
+              <kbd>ЛКМ</kbd> огонь <kbd>P</kbd> пауза
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Тарифы</span>
+          <h2 class="section__title">Выбери <span class="gradient-text">свой доступ</span></h2>
+          <p class="section__desc">Активация мгновенная. Промокод <b>GOD10</b> — скидка 10%.</p>
+        </div>
+
+        <div class="grid grid--4" id="plans">
+          <article class="price" data-reveal data-plan="m30" data-name="30 дней" data-price="149">
+            <h3>30 дней</h3>
+            <div class="price__value">149 ₽<span>/ 30 дней</span></div>
+            <ul>
+              <li>Все модули клиента</li>
+              <li>Авто-обновления</li>
+              <li>Поддержка в чате</li>
+              <li>1 сброс HWID</li>
+            </ul>
+            <button class="btn btn--ghost btn--block" data-buy="m30">Купить</button>
+          </article>
+
+          <article class="price" data-reveal data-plan="m90" data-name="90 дней" data-price="300">
+            <h3>90 дней</h3>
+            <div class="price__value">300 ₽<span>/ 90 дней</span></div>
+            <ul>
+              <li>Всё из тарифа «30 дней»</li>
+              <li>Приоритетные апдейты</li>
+              <li>Поддержка 24/7</li>
+              <li>2 сброса HWID</li>
+            </ul>
+            <button class="btn btn--ghost btn--block" data-buy="m90">Купить</button>
+          </article>
+
+          <article class="price price--hot" data-reveal data-plan="life" data-name="LifeTime" data-price="450">
+            <div class="price__tag">Хит</div>
+            <h3>LifeTime</h3>
+            <div class="price__value">450 ₽<span>/ навсегда</span></div>
+            <ul>
+              <li>Бессрочный доступ</li>
+              <li>Облачные конфиги</li>
+              <li>Вся карта возможностей</li>
+              <li>Безлимитные сбросы HWID</li>
+            </ul>
+            <button class="btn btn--primary btn--block" data-buy="life">Купить</button>
+          </article>
+
+          <article class="price" data-reveal data-plan="ltbeta" data-name="LT + Beta" data-price="700">
+            <div class="price__tag price__tag--beta">BETA</div>
+            <h3>LT + Beta</h3>
+            <div class="price__value">700 ₽<span>/ навсегда</span></div>
+            <ul>
+              <li>Всё из LifeTime</li>
+              <li>Ранний доступ к бета-версиям</li>
+              <li>Персональный менеджер</li>
+              <li>Голосование за новые фичи</li>
+            </ul>
+            <button class="btn btn--ghost btn--block" data-buy="ltbeta">Купить</button>
+          </article>
+        </div>
+
+        <div class="paybar" data-reveal>
+          <span>Способы оплаты:</span>
+          <b>Visa</b><b>MasterCard</b><b>Мир</b><b>СБП</b><b>USDT</b><b>BTC</b>
+          <span class="paybar__note">· платёжный модуль в демо-режиме</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROFILE ===== -->
+    <section class="section" id="profile">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Профиль</span>
+          <h2 class="section__title">Фото, ник и <span class="gradient-text">UID</span></h2>
+          <p class="section__desc">
+            Номер аккаунта (UID) присваивается при регистрации. Здесь же —
+            система промокодов: активируй код и получи подписку.
+          </p>
+        </div>
+
+        <div class="profile" data-reveal>
+          <div class="profile__guest" id="profileGuest">
+            <div class="profile__guest-ico">👤</div>
+            <h3>Профиль закрыт</h3>
+            <p>Войди или зарегистрируйся — здесь появятся фото, ник, UID и активированные промокоды.</p>
+            <div class="profile__guest-btns">
+              <button class="btn btn--primary" id="profileLogin">Войти</button>
+              <button class="btn btn--ghost" id="profileRegister">Создать аккаунт</button>
+            </div>
+          </div>
+
+          <div class="profile__grid" id="profileGrid" hidden>
+            <aside class="pcard">
+              <div class="pcard__avatar" id="pAvatar">M</div>
+              <input type="file" id="avatarFile" accept="image/*" hidden />
+              <div class="pcard__btns">
+                <button class="btn btn--ghost btn--sm" id="avatarBtn">Загрузить фото</button>
+                <button class="btn btn--ghost btn--sm" id="avatarReset">Сбросить</button>
+              </div>
+              <div class="emoji-row" id="emojiRow">
+                <button type="button" data-emoji="🎮">🎮</button>
+                <button type="button" data-emoji="🦊">🦊</button>
+                <button type="button" data-emoji="💀">💀</button>
+                <button type="button" data-emoji="🤖">🤖</button>
+                <button type="button" data-emoji="👾">👾</button>
+                <button type="button" data-emoji="🔥">🔥</button>
+              </div>
+
+              <h3 id="pNick">—</h3>
+              <p class="pcard__mail" id="pEmail">—</p>
+              <div class="uid-chip" id="pUid">UID —</div>
+
+              <div class="pcard__meta">
+                <div><span>Тариф</span><b id="pPlan">нет</b></div>
+                <div><span>Действует до</span><b id="pExpiry">—</b></div>
+                <div><span>Покупок</span><b id="pBuys">0</b></div>
+                <div><span>Промо активировано</span><b id="pPromos">0</b></div>
+              </div>
+            </aside>
+
+            <div class="promo">
+              <div class="promo__head">
+                <h3>Промокоды</h3>
+                <span class="promo__note">демо-каталог · код одноразовый</span>
+              </div>
+
+              <div class="promo__activate">
+                <input type="text" id="promoInput" placeholder="MD-WEEK-XXXX-XXXX" />
+                <button class="btn btn--primary" id="promoActivate">Активировать</button>
+              </div>
+
+              <div class="promo__list" id="promoList"></div>
+
+              <div class="promo__foot">
+                <button class="btn btn--ghost btn--sm" id="promoRegen">Сгенерировать новые коды</button>
+                <span class="promo__status" id="promoStatus">Активировано: <b>0</b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUPPORT ===== -->
+    <section class="section section--alt" id="support">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">Поддержка</span>
+          <h2 class="section__title">Мы на связи <span class="gradient-text">круглосуточно</span></h2>
+          <p class="section__desc">Среднее время первого ответа — 7 минут.</p>
+        </div>
+
+        <div class="support">
+          <div class="support__contacts" data-reveal>
+            <div class="contact-card">
+              <div class="contact-card__icon">🎫</div>
+              <div>
+                <h4>Тикеты</h4>
+                <p>Личный кабинет · SLA до 15 мин</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon">💬</div>
+              <div>
+                <h4>Discord</h4>
+                <p>madium.support · живой чат</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon">📧</div>
+              <div>
+                <h4>E-mail</h4>
+                <p>help@madium.site · до 1 часа</p>
+              </div>
+            </div>
+
+            <div class="sys-status">
+              <h4>Статус системы</h4>
+              <div class="sys-status__row"><span>Лоадер</span><i class="ok">Работает</i></div>
+              <div class="sys-status__row"><span>Платёжный шлюз</span><i class="ok">Работает</i></div>
+              <div class="sys-status__row"><span>Авторизация</span><i class="ok">Работает</i></div>
+              <div class="sys-status__row"><span>Обновления</span><i class="warn">Ротация 18:00</i></div>
+            </div>
+          </div>
+
+          <form class="ticket" id="ticketForm" data-reveal novalidate>
+            <h3>Оставить заявку</h3>
+            <div class="ticket__row">
+              <label>Ник / логин
+                <input type="text" name="nick" placeholder="например, Madium" required />
+              </label>
+              <label>E-mail
+                <input type="email" name="email" placeholder="you@mail.ru" required />
+              </label>
+            </div>
+            <label>Тема
+              <select name="topic">
+                <option>Вопрос по оплате</option>
+                <option>Не запускается клиент</option>
+                <option>Сброс HWID</option>
+                <option>Предложение / сотрудничество</option>
+                <option>Другое</option>
+              </select>
+            </label>
+            <label>Сообщение
+              <textarea name="msg" rows="5" placeholder="Опишите проблему подробнее..." required></textarea>
+            </label>
+            <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
+            <p class="ticket__note">Демо-форма: данные никуда не отправляются.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head" data-reveal>
+          <span class="section__eyebrow">FAQ</span>
+          <h2 class="section__title">Частые <span class="gradient-text">вопросы</span></h2>
+        </div>
+
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary>Как активируется доступ после оплаты?</summary>
+            <p>Тариф привязывается к аккаунту сразу после платежа, а ключ приходит на почту в течение 1–2 минут. Всё видно в личном кабинете.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Зачем нужен аккаунт?</summary>
+            <p>Подписка, ключи, сбросы HWID и заявки в поддержку привязаны к аккаунту — так доступ не потеряется при смене устройства. Регистрация занимает 10 секунд.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Какие способы оплаты доступны?</summary>
+            <p>Банковские карты (Visa/MasterCard/Мир), СБП и криптовалюта (USDT, BTC). Минимальный тариф — 30 дней за 149 ₽.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Что входит в поддержку?</summary>
+            <p>Помощь с установкой и настройкой, разбор ошибок запуска, сброс HWID и приоритетные тикеты на тарифах Month и Lifetime.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Работает ли на моей системе?</summary>
+            <p>Поддерживаются Windows 10/11 (x64). Перед покупкой можно проверить совместимость в бесплатном диагностическом режиме лоадера.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Есть ли возврат средств?</summary>
+            <p>Если клиент не запустился по нашей вине в первые 2 часа — мы продлим доступ или вернём средства на баланс.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Это настоящий магазин?</summary>
+            <p>Нет — это демонстрационный сайт (лендинг-шаблон). Оплата и заявки имитируются, реальных списаний нет.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-band">
+      <div class="container cta-band__inner" data-reveal>
+        <div>
+          <h2>Готов начать?</h2>
+          <p>Подписка, поддержка и все обновления — в одном доступе.</p>
+        </div>
+        <div class="cta-band__btns">
+          <button class="btn btn--primary btn--lg" data-buy="">Купить доступ</button>
+          <a href="#support" class="btn btn--ghost btn--lg">Задать вопрос</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo">
+          <span class="logo__mark">MD</span>
+          <span class="logo__text">Madium<em>Client</em></span>
+        </a>
+        <p>Демонстрационный лендинг-шаблон. Все платежи и заявки — имитация.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h5>Продукт</h5>
+          <a href="#features">Возможности</a>
+          <a href="#pricing">Тарифы</a>
+          <a href="#game">Мини-игра</a>
+        </div>
+        <div>
+          <h5>Помощь</h5>
+          <a href="#support">Поддержка</a>
+          <a href="#faq">FAQ</a>
+          <a href="#support">Статус</a>
+        </div>
+        <div>
+          <h5>Контакты</h5>
+          <a href="#support">Discord</a>
+          <a href="#support">help@madium.site</a>
+          <a href="#support">Тикеты</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Madium Client (demo)</span>
+      <span>Сделано с ♥ и canvas'ом</span>
+    </div>
+  </footer>
+
+  <!-- ===== BUY MODAL ===== -->
+  <div class="modal" id="buyModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true">
+      <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+
+      <div class="modal__head">
+        <h3 id="mTitle">Оформление доступа</h3>
+        <p>Демо-касса: списаний не происходит.</p>
+      </div>
+
+      <div class="modal__plans">
+        <button class="mp" data-plan="m30"><b>30 дней</b><span>149 ₽</span></button>
+        <button class="mp" data-plan="m90"><b>90 дней</b><span>300 ₽</span></button>
+        <button class="mp is-active" data-plan="life"><b>LifeTime</b><span>450 ₽</span></button>
+        <button class="mp" data-plan="ltbeta"><b>LT + Beta</b><span>700 ₽</span></button>
+      </div>
+
+      <form id="buyForm" novalidate>
+        <label class="field">E-mail для ключа
+          <input type="email" id="buyEmail" placeholder="you@mail.ru" required />
+        </label>        <label class="field">Промокод
+          <div class="promo">
+            <input type="text" id="promo" placeholder="GOD10" />
+            <button type="button" class="btn btn--ghost btn--sm" id="promoBtn">Применить</button>
+          </div>
+        </label>
+        <label class="field">Номер карты
+          <input type="text" id="card" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" />
+        </label>
+        <div class="field-row">
+          <label class="field">MM/YY
+            <input type="text" id="mmYY" placeholder="12/28" maxlength="5" />
+          </label>
+          <label class="field">CVC
+            <input type="password" id="cvc" placeholder="•••" maxlength="3" inputmode="numeric" />
+          </label>
+        </div>
+
+        <div class="total">
+          <span>К оплате</span>
+          <b id="totalVal">450 ₽</b>
+        </div>
+
+        <button class="btn btn--primary btn--block btn--lg" type="submit" id="payBtn">Оплатить</button>
+        <p class="modal__note">🔒 Данные карты никуда не отправляются — форма работает в демо-режиме.</p>
+      </form>
+
+      <div class="modal__success" id="buySuccess" hidden>
+        <div class="success-ico">✓</div>
+        <h3>Заказ оформлен!</h3>
+        <p>Ключ <b id="fakeKey">MD-XXXX-XXXX-XXXX</b> привязан к аккаунту и отправлен бы на почту.<br />Демо-режим: реального платежа нет.</p>
+        <button class="btn btn--primary btn--block" data-close>Отлично</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AUTH MODAL ===== -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card modal__card--auth" role="dialog" aria-modal="true">
+      <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+
+      <div class="modal__head">
+        <h3 id="authTitle">Вход в аккаунт</h3>
+        <p id="authSub">Доступ, ключи и заявки привязаны к аккаунту.</p>
+      </div>
+
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab is-active" data-auth-tab="login">Вход</button>
+        <button type="button" class="auth-tab" data-auth-tab="register">Регистрация</button>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <label class="field">E-mail
+          <input type="email" id="loginEmail" placeholder="you@mail.ru" autocomplete="username" required />
+        </label>
+        <label class="field">Пароль
+          <input type="password" id="loginPass" placeholder="••••••" autocomplete="current-password" required />
+        </label>
+        <button class="btn btn--primary btn--block btn--lg" type="submit">Войти</button>
+        <p class="modal__note">Нет аккаунта? Переключись на «Регистрация» — это 10 секунд.</p>
+      </form>
+
+      <form id="registerForm" novalidate hidden>
+        <label class="field">Ник
+          <input type="text" id="regNick" placeholder="Madium" minlength="3" required />
+        </label>
+        <label class="field">E-mail
+          <input type="email" id="regEmail" placeholder="you@mail.ru" required />
+        </label>
+        <div class="field-row">
+          <label class="field">Пароль
+            <input type="password" id="regPass" placeholder="мин. 4 символа" minlength="4" required />
+          </label>
+          <label class="field">Повторите пароль
+            <input type="password" id="regPass2" placeholder="ещё раз" required />
+          </label>
+        </div>
+        <button class="btn btn--primary btn--block btn--lg" type="submit">Создать аккаунт</button>
+        <p class="modal__note">🔒 Данные хранятся только в этом браузере (localStorage) — демо-система.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== ACCOUNT MODAL ===== -->
+  <div class="modal" id="accModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card modal__card--acc" role="dialog" aria-modal="true">
+      <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+
+      <div class="acc-hero">
+        <div class="acc-avatar" id="accAvatar">G</div>
+        <div>
+          <h3 id="accNick">Nick</h3>
+          <p id="accEmail">mail@mail.ru</p>
+        </div>
+      </div>
+
+      <div class="acc-plan" id="accPlan">
+        <div class="acc-plan__row">
+          <span>Текущий тариф</span>
+          <b id="accPlanName">Нет активного доступа</b>
+        </div>
+        <div class="acc-plan__row">
+          <span>Действует до</span>
+          <b id="accExpiry">—</b>
+        </div>
+        <div class="acc-plan__row">
+          <span>Ключ</span>
+          <b class="acc-key" id="accKey">—</b>
+        </div>
+        <div class="acc-plan__row">
+          <span>UID</span>
+          <b class="acc-key" id="accUid">—</b>
+        </div>
+        <div class="acc-plan__row">
+          <span>Beta-канал</span>
+          <b id="accBeta">Выключен</b>
+        </div>
+      </div>
+
+      <div class="acc-actions">
+        <button class="btn btn--primary" id="accExtend">Продлить / купить</button>
+        <button class="btn btn--ghost" id="accLogout">Выйти</button>
+      </div>
+
+      <div class="acc-stats">
+        <div><span>Заявок создано</span><b id="accTickets">0</b></div>
+        <div><span>Покупок</span><b id="accBuys">0</b></div>
+        <div><span>Сессия</span><b>активна</b></div>
+      </div>
+
+      <p class="modal__note">Личный кабинет работает в демо-режиме на данных из localStorage.</p>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
